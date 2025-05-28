@@ -350,6 +350,15 @@ export const CARS = [
         serviceRecords: [
             { serviceId: 33, type: "Door Service", date: "01/06/2025", cost: 120, description: "Door mechanism maintenance", mechanic: "Tom Brown" }
         ]
+    },
+    {
+        id: 30,
+        make: "Bugatti",
+        model: "Chiron",
+        color: "White",
+        price: 355600,
+        electric: false,
+        date: "03/06/2025",
     }
 ]
 

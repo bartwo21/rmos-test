@@ -90,7 +90,7 @@ function Table() {
                     
                     <div className="ml-auto mt-2">
                         <button onClick={onReverse} className="cursor-pointer h-7 bg-zinc-400 text-white px-4 py-1 rounded-md mr-2 text-sm">Reverse</button>
-                        <button onClick={scrambleAndRefreshLeftToRight} className="cursor-pointer h-7 bg-zinc-400 hover:bg-zinc-500 text-white px-4 py-1 rounded-md mr-2 text-sm">Refresh</button>
+                        <button onClick={scrambleAndRefreshLeftToRight} className="cursor-pointer h-7 bg-zinc-400 text-white px-4 py-1 rounded-md mr-2 text-sm">Refresh</button>
                         <button onClick={handleExport} className="cursor-pointer h-7 bg-[#b3e7ff] text-white px-4 py-1 rounded-md mr-2 relative enterprise-feature text-sm">Export</button>
                         <button onClick={onRemove} className={`h-7 bg-zinc-400 text-white px-4 py-1 rounded-md mr-2 text-sm ${!hasSelectedRows ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer '}`} disabled={!hasSelectedRows}>Remove Selected</button>
                     </div>

@@ -15,6 +15,7 @@ const UpdateCarModal: React.FC<UpdateCarModalProps> = ({ isOpen, onClose, onUpda
         model: '',
         price: 0,
         electric: false,
+        color: '',
         date: '',
         serviceRecords: []
     });

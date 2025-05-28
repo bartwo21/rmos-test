@@ -29,7 +29,8 @@ function CarForm({ onAddCar }: CarFormProps) {
                 price: parseFloat(formData.price),
                 electric: formData.electric,
                 date: new Date().toLocaleDateString('en-GB'),
-                serviceRecords: []
+                serviceRecords: [],
+                color: "Red"
             };
             onAddCar(newRow);
             setFormData(DEFAULT_FORM_DATA);

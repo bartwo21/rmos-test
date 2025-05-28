@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useMemo } from "react";
-import type { RowSelectionOptions, StatusPanelDef, RefreshCellsParams } from "ag-grid-community";
+import type { RowSelectionOptions, StatusPanelDef } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
 import { CARS } from "../constants";
 import { Car } from "@/types";
@@ -21,16 +21,12 @@ export const useAgGrid = () => {
             
             const makes = ["Tesla", "Ford", "Toyota", "BMW", "Mercedes", "Audi", "Honda", "Nissan"];
             const models = ["Model Y", "F-150", "Corolla", "X5", "C-Class", "A4", "Civic", "Leaf"];
-            const colors = ["White", "Black", "Red", "Blue", "Gray", "Silver", "Green"];
             
             if (Math.random() > 0.7) {
                 newItem.make = makes[Math.floor(Math.random() * makes.length)];
             }
             if (Math.random() > 0.7) {
                 newItem.model = models[Math.floor(Math.random() * models.length)];
-            }
-            if (Math.random() > 0.6) {
-                newItem.color = colors[Math.floor(Math.random() * colors.length)];
             }
             if (Math.random() > 0.5) {
                 newItem.price = Math.floor(Math.random() * 100000) + 20000;
