@@ -23,11 +23,12 @@ function CarForm({ onAddCar }: CarFormProps) {
         e.preventDefault();
         if (formData.make && formData.model && formData.price) {
             const newRow = {
-                id: crypto.randomUUID(),
+                id: Date.now(),
                 make: formData.make,
                 model: formData.model,
                 price: parseFloat(formData.price),
-                electric: formData.electric
+                electric: formData.electric,
+                date: new Date().toLocaleDateString('en-GB')
             };
             onAddCar(newRow);
             setFormData(DEFAULT_FORM_DATA);
@@ -35,10 +36,10 @@ function CarForm({ onAddCar }: CarFormProps) {
     };
 
     return (
-        <div className="mb-8 bg-white rounded-lg shadow-sm border p-6">
+        <div className="mb-8 bg-white rounded-lg shadow-sm p-6">
             <h2 className="text-xl font-semibold mb-4 text-gray-800">Add New Car</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-col">
                     <div>
                         <label htmlFor="make" className="block text-sm font-medium text-gray-700 mb-1">
                             Make
@@ -103,7 +104,7 @@ function CarForm({ onAddCar }: CarFormProps) {
                 <div className="flex justify-end">
                     <button
                         type="submit"
-                        className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 cursor-pointer"
+                        className="px-6 py-2 bg-blue-600 w-full text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 cursor-pointer"
                     >
                         Add Car
                     </button>
