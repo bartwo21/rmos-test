@@ -1,18 +1,20 @@
-import type { CellClassParams, IDetailCellRendererParams } from "ag-grid-community";
+import type { CellClassParams, IDetailCellRendererParams, ValueFormatterParams } from "ag-grid-community";
 import { useMemo } from "react";
 import { Car, IServiceRecord } from "@/types";
 import CompanyLogoRenderer from "./CompanyLogoRenderer";
 
 export const useTableColumns = () => {
+    const currencyFormatter = (params: ValueFormatterParams) => {
+        return "£" + Math.floor(params.value).toLocaleString();
+    };
+
     const colDefs = useMemo(() => [
         {
             headerName: "Car Details",
-            headerStyle: { color: "white", backgroundColor: "cadetblue" },
             children: [
                 { field: "make" as const, cellRenderer: "agGroupCellRenderer", sortable: true, filter: true, rowGroup: true, hide: true, enableRowGroup: true },
-                { field: "model" as const, sortable: true, filter: true, enableRowGroup: true, cellClassRules: {
-                    "bg-gray-200": (params: CellClassParams) => params.data && params.data.model === "Model Y"
-                } },
+                { field: "model" as const, sortable: true, filter: true, enableRowGroup: true},
+                { field: "color", filter: true }
             ]},
             {
                 headerName: "Logo",
@@ -27,7 +29,8 @@ export const useTableColumns = () => {
             filter: "agNumberColumnFilter",
             cellRenderer: "agAnimateShowChangeCellRenderer",
             aggFunc: 'sum',
-            enableValue: true
+            enableValue: true,
+            valueFormatter: currencyFormatter
         },
         {
             field: "date" as const,

@@ -31,7 +31,7 @@ function PriceRangeFilter({ onFilterChange }: PriceRangeFilterProps) {
                     const range = PRICE_RANGES.find(r => r.label === e.target.value) || PRICE_RANGES[0];
                     handleRangeChange(range);
                 }}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+                className="w-full px-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
             >
                 {PRICE_RANGES.map((range) => (
                     <option key={range.label} value={range.label}>

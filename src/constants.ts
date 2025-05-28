@@ -3,6 +3,7 @@ export const CARS = [
         id: 1, 
         make: "Tesla", 
         model: "Model Y", 
+        color: "White",
         price: 64950, 
         electric: true, 
         date: "15/03/2023",
@@ -15,6 +16,7 @@ export const CARS = [
         id: 2, 
         make: "Ford", 
         model: "F-Series", 
+        color: "Blue",
         price: 33850, 
         electric: false, 
         date: "22/01/2023",
@@ -27,6 +29,7 @@ export const CARS = [
         id: 3, 
         make: "Toyota", 
         model: "Corolla", 
+        color: "Red",
         price: 29600, 
         electric: false, 
         date: "08/05/2023",
@@ -36,9 +39,10 @@ export const CARS = [
     },
     { 
         id: 4, 
-        make: "Chevrolet", 
-        model: "Silverado", 
-        price: 45000, 
+        make: "BMW", 
+        model: "X5", 
+        color: "Black",
+        price: 67000, 
         electric: false, 
         date: "12/02/2023",
         serviceRecords: [
@@ -48,9 +52,10 @@ export const CARS = [
     },
     { 
         id: 5, 
-        make: "Toyota", 
-        model: "Camry", 
-        price: 32500, 
+        make: "Mercedes", 
+        model: "C-Class", 
+        color: "Silver",
+        price: 52500, 
         electric: false, 
         date: "30/04/2023",
         serviceRecords: [
@@ -59,8 +64,9 @@ export const CARS = [
     },
     { 
         id: 6, 
-        make: "Ford", 
-        model: "Mustang", 
+        make: "Audi", 
+        model: "A4", 
+        color: "Gray",
         price: 49990, 
         electric: false, 
         date: "18/06/2023",
@@ -71,8 +77,9 @@ export const CARS = [
     },
     { 
         id: 7, 
-        make: "Chevrolet", 
-        model: "Bolt", 
+        make: "Nissan", 
+        model: "Leaf", 
+        color: "Green",
         price: 36600, 
         electric: true, 
         date: "25/07/2023",
@@ -82,9 +89,10 @@ export const CARS = [
     },
     { 
         id: 8, 
-        make: "Ford", 
-        model: "F-150", 
-        price: 59990, 
+        make: "Honda", 
+        model: "Civic", 
+        color: "White",
+        price: 28990, 
         electric: false, 
         date: "03/08/2023",
         serviceRecords: [
@@ -93,10 +101,11 @@ export const CARS = [
     },
     { 
         id: 9, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Hyundai", 
+        model: "Elantra", 
+        color: "Blue",
+        price: 24600, 
+        electric: false, 
         date: "14/09/2023",
         serviceRecords: [
             { serviceId: 13, type: "Hybrid System Check", date: "01/10/2023", cost: 150, description: "Hybrid system diagnostics", mechanic: "Tom Brown" }
@@ -104,8 +113,9 @@ export const CARS = [
     },
     { 
         id: 10, 
-        make: "Chevrolet", 
-        model: "Equinox", 
+        make: "Kia", 
+        model: "Optima", 
+        color: "Red",
         price: 32500, 
         electric: false, 
         date: "27/10/2023",
@@ -115,10 +125,11 @@ export const CARS = [
     },
     { 
         id: 11, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Mazda", 
+        model: "CX-5", 
+        color: "Black",
+        price: 35600, 
+        electric: false, 
         date: "05/11/2023",
         serviceRecords: [
             { serviceId: 15, type: "Tire Replacement", date: "20/11/2023", cost: 400, description: "All-season tire replacement", mechanic: "Mike Johnson" }
@@ -126,9 +137,10 @@ export const CARS = [
     },
     { 
         id: 12, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Subaru", 
+        model: "Outback", 
+        color: "Silver",
+        price: 38500, 
         electric: false, 
         date: "19/12/2023",
         serviceRecords: [
@@ -137,10 +149,11 @@ export const CARS = [
     },
     { 
         id: 13, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Volkswagen", 
+        model: "Jetta", 
+        color: "Gray",
+        price: 31600, 
+        electric: false, 
         date: "07/01/2024",
         serviceRecords: [
             { serviceId: 17, type: "Software Update", date: "20/01/2024", cost: 80, description: "System software update", mechanic: "Tom Brown" }
@@ -148,9 +161,10 @@ export const CARS = [
     },
     { 
         id: 14, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Lexus", 
+        model: "RX", 
+        color: "White",
+        price: 58500, 
         electric: false, 
         date: "16/02/2024",
         serviceRecords: [
@@ -159,10 +173,11 @@ export const CARS = [
     },
     { 
         id: 15, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Acura", 
+        model: "TLX", 
+        color: "Blue",
+        price: 44600, 
+        electric: false, 
         date: "28/03/2024",
         serviceRecords: [
             { serviceId: 19, type: "Coolant Service", date: "10/04/2024", cost: 110, description: "Coolant system maintenance", mechanic: "Mike Johnson" }
@@ -170,9 +185,10 @@ export const CARS = [
     },
     { 
         id: 16, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Infiniti", 
+        model: "Q50", 
+        color: "Red",
+        price: 41500, 
         electric: false, 
         date: "11/04/2024",
         serviceRecords: [
@@ -181,10 +197,11 @@ export const CARS = [
     },
     { 
         id: 17, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Cadillac", 
+        model: "XT5", 
+        color: "Black",
+        price: 55600, 
+        electric: false, 
         date: "23/05/2024",
         serviceRecords: [
             { serviceId: 21, type: "Battery Calibration", date: "05/06/2024", cost: 90, description: "Battery system calibration", mechanic: "Tom Brown" }
@@ -192,9 +209,10 @@ export const CARS = [
     },
     { 
         id: 18, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Lincoln", 
+        model: "Aviator", 
+        color: "Silver",
+        price: 62500, 
         electric: false, 
         date: "09/06/2024",
         serviceRecords: [
@@ -203,10 +221,11 @@ export const CARS = [
     },
     { 
         id: 19, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Genesis", 
+        model: "G90", 
+        color: "Gray",
+        price: 72600, 
+        electric: false, 
         date: "17/07/2024",
         serviceRecords: [
             { serviceId: 23, type: "AC Service", date: "01/08/2024", cost: 120, description: "Air conditioning maintenance", mechanic: "Mike Johnson" }
@@ -214,9 +233,10 @@ export const CARS = [
     },
     { 
         id: 20, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Volvo", 
+        model: "XC90", 
+        color: "White",
+        price: 68500, 
         electric: false, 
         date: "02/08/2024",
         serviceRecords: [
@@ -225,10 +245,11 @@ export const CARS = [
     },
     { 
         id: 21, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Jaguar", 
+        model: "F-Pace", 
+        color: "Blue",
+        price: 59600, 
+        electric: false, 
         date: "13/09/2024",
         serviceRecords: [
             { serviceId: 25, type: "Routine Check", date: "25/09/2024", cost: 85, description: "Routine system check", mechanic: "Tom Brown" }
@@ -236,9 +257,10 @@ export const CARS = [
     },
     { 
         id: 22, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Land Rover", 
+        model: "Discovery", 
+        color: "Red",
+        price: 64500, 
         electric: false, 
         date: "26/10/2024",
         serviceRecords: [
@@ -247,10 +269,11 @@ export const CARS = [
     },
     { 
         id: 23, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Porsche", 
+        model: "Macan", 
+        color: "Black",
+        price: 78600, 
+        electric: false, 
         date: "04/11/2024",
         serviceRecords: [
             { serviceId: 27, type: "Wiper Replacement", date: "15/11/2024", cost: 45, description: "Windshield wiper replacement", mechanic: "Mike Johnson" }
@@ -258,9 +281,10 @@ export const CARS = [
     },
     { 
         id: 24, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Maserati", 
+        model: "Levante", 
+        color: "Silver",
+        price: 89500, 
         electric: false, 
         date: "18/12/2024",
         serviceRecords: [
@@ -269,10 +293,11 @@ export const CARS = [
     },
     { 
         id: 25, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Alfa Romeo", 
+        model: "Stelvio", 
+        color: "Gray",
+        price: 56600, 
+        electric: false, 
         date: "06/01/2025",
         serviceRecords: [
             { serviceId: 29, type: "Light Service", date: "15/01/2025", cost: 70, description: "Headlight and taillight service", mechanic: "Tom Brown" }
@@ -280,9 +305,10 @@ export const CARS = [
     },
     { 
         id: 26, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "McLaren", 
+        model: "GT", 
+        color: "White",
+        price: 210500, 
         electric: false, 
         date: "15/02/2025",
         serviceRecords: [
@@ -291,10 +317,11 @@ export const CARS = [
     },
     { 
         id: 27, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Lamborghini", 
+        model: "Urus", 
+        color: "Blue",
+        price: 225600, 
+        electric: false, 
         date: "27/03/2025",
         serviceRecords: [
             { serviceId: 31, type: "Alignment Service", date: "05/04/2025", cost: 95, description: "Wheel alignment service", mechanic: "Mike Johnson" }
@@ -302,9 +329,10 @@ export const CARS = [
     },
     { 
         id: 28, 
-        make: "Chevrolet", 
-        model: "Equinox", 
-        price: 32500, 
+        make: "Ferrari", 
+        model: "Roma", 
+        color: "Red",
+        price: 245500, 
         electric: false, 
         date: "10/04/2025",
         serviceRecords: [
@@ -313,10 +341,11 @@ export const CARS = [
     },
     { 
         id: 29, 
-        make: "Toyota", 
-        model: "Prius", 
-        price: 29600, 
-        electric: true, 
+        make: "Bentley", 
+        model: "Bentayga", 
+        color: "Black",
+        price: 195600, 
+        electric: false, 
         date: "22/05/2025",
         serviceRecords: [
             { serviceId: 33, type: "Door Service", date: "01/06/2025", cost: 120, description: "Door mechanism maintenance", mechanic: "Tom Brown" }
@@ -338,7 +367,8 @@ export const DEFAULT_FORM_DATA = {
 
 export const DEFAULT_COL_DEF = {
     flex: 1,
-    editable: true
+    editable: true,
+    enableCellChangeFlash: true
 };
 
 export const PRICE_RANGES_OPTIONS = [

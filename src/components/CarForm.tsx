@@ -28,7 +28,8 @@ function CarForm({ onAddCar }: CarFormProps) {
                 model: formData.model,
                 price: parseFloat(formData.price),
                 electric: formData.electric,
-                date: new Date().toLocaleDateString('en-GB')
+                date: new Date().toLocaleDateString('en-GB'),
+                serviceRecords: []
             };
             onAddCar(newRow);
             setFormData(DEFAULT_FORM_DATA);
@@ -36,7 +37,7 @@ function CarForm({ onAddCar }: CarFormProps) {
     };
 
     return (
-        <div className="mb-8 bg-white rounded-lg shadow-sm p-6">
+        <div className="mb-8 bg-white rounded-lg shadow-sm p-6 mt-5">
             <h2 className="text-xl font-semibold mb-4 text-gray-800">Add New Car</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex gap-4 flex-col">

@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useMemo } from "react";
-import type { RowSelectionOptions, StatusPanelDef } from "ag-grid-community";
+import type { RowSelectionOptions, StatusPanelDef, RefreshCellsParams } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
 import { CARS } from "../constants";
 import { Car } from "@/types";
@@ -9,10 +9,40 @@ export const useAgGrid = () => {
     const [rowData, setRowData] = useState(CARS);
     const [hasSelectedRows, setHasSelectedRows] = useState(false);
     const [groupSelectionMode, setGroupSelectionMode] = useState<"self" | "descendants">("self");
+    const [loading, setLoading] = useState(false);
 
     const getGroupSelectsValue = useCallback(() => {
         return groupSelectionMode;
     }, [groupSelectionMode]);
+
+    const scrambleAndRefreshLeftToRight = useCallback(() => {
+        const updatedData = rowData.map(item => {
+            const newItem = { ...item };
+            
+            const makes = ["Tesla", "Ford", "Toyota", "BMW", "Mercedes", "Audi", "Honda", "Nissan"];
+            const models = ["Model Y", "F-150", "Corolla", "X5", "C-Class", "A4", "Civic", "Leaf"];
+            const colors = ["White", "Black", "Red", "Blue", "Gray", "Silver", "Green"];
+            
+            if (Math.random() > 0.7) {
+                newItem.make = makes[Math.floor(Math.random() * makes.length)];
+            }
+            if (Math.random() > 0.7) {
+                newItem.model = models[Math.floor(Math.random() * models.length)];
+            }
+            if (Math.random() > 0.6) {
+                newItem.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            if (Math.random() > 0.5) {
+                newItem.price = Math.floor(Math.random() * 100000) + 20000;
+            }
+            if (Math.random() > 0.8) {
+                newItem.electric = Math.random() > 0.5;
+            }
+            return newItem;
+        });
+        
+        setRowData(updatedData);
+    }, [rowData]);
 
     const handleAddCar = (car: Car) => {
         const newData = [...rowData, car];
@@ -93,6 +123,17 @@ export const useAgGrid = () => {
         );
         setRowData(updatedData);
     }, [rowData]);
+    
+    const mockLoading = useCallback(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
+    const handleExport = useCallback(() => {
+        gridRef.current?.api.exportDataAsExcel();
+    }, []);
 
     const statusBar = useMemo<{
         statusPanels: StatusPanelDef[];
@@ -126,6 +167,10 @@ export const useAgGrid = () => {
         onReverse,
         onRemove,
         onSelectionModeChange,
-        onCarUpdate
+        onCarUpdate,
+        loading,
+        mockLoading,
+        handleExport,
+        scrambleAndRefreshLeftToRight
     };
 }; 

@@ -27,3 +27,88 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.ag-details-wrapper {
+    background-color: #b3e7ff;
+}
+
+.ag-details-row {
+    background-color: #b3e7ff;
+}
+
+.ag-status-bar {
+    background-color: #b3e7ff;
+}
+
+.ag-status-name-value {
+    color: white;
+}
+
+.ag-side-bar {
+    background-color: #b3e7ff;
+}
+
+.ag-side-buttons .ag-side-button {
+    background-color: #b3e7ff;
+}
+
+.ag-side-buttons .ag-side-button:hover {
+    background-color: #b3e7ff;
+}
+
+.ag-side-buttons .ag-side-button.ag-selected {
+    background-color: #b3e7ff;
+}
+
+.ag-tool-panel-wrapper {
+    background-color: #b3e7ff;
+}
+
+.ag-group-expanded .ag-group-cell-entire-row,
+.ag-group-contracted .ag-group-cell-entire-row {
+    background-color: #b3e7ff;
+}
+
+.ag-group-cell {
+    background-color: #b3e7ff;
+}
+
+.ag-group-component {
+    background-color: #b3e7ff;
+}
+
+.ag-row-total {
+    background-color: #b3e7ff;
+}
+
+.ag-pivot-mode-panel {
+    background-color: #b3e7ff;
+}
+
+.ag-menu-option {
+    background-color: #b3e7ff;
+}
+
+.ag-menu-option:hover {
+    background-color: #b3e7ff;
+}
+
+.ag-status-bar-center,
+.ag-status-bar-left,
+.ag-status-bar-right {
+    background-color: #b3e7ff;
+}
+
+
+.ag-column-drop-horizontal {
+    background-color: #b3e7ff;
+}
+
+.ag-pivot-mode-select {
+    background-color: #b3e7ff;
+}
+
+.ag-group-contracted,
+.ag-group-expanded {
+    color: #b3e7ff;
+}
